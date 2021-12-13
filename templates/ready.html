@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your shorted URL</title>
+        <link rel="icon" type="image/png" href="https://www.pngitem.com/pimgs/m/136-1361476_url-chain-link-png-image-background-twitter-link.png"/>
+        <script>
+            function Copy() {
+                var copyText = document.getElementById("shortedurl");
+                copyText.select();
+                copyText.setSelectionRange(0, 99999);
+                document.execCommand("copy");
+                copyText.setSelectionRange(0, 0)
+            }
+            function Redirect(){
+                window.location.href = "/";
+            }
+            document.body.style.zoom = "500%";
+        </script>
+    </head>
+    <body>
+        <script>
+            document.querySelector('#result').innerHTML = '<input type="text" id="shortedurl" size="46" style="text-align:center;" value="' + window.location.href + '/shorted?code=' + code '" readonly>';
+        </script>
+        <script>
+            document.body.style.zoom = "500%";
+        </script>
+        <h1 style="text-align:center; margin: auto; font-size: 25px;">Your shorted URL:</h1>
+        <div id="result" style="text-align:center; margin: auto; font-size: 25px;">
+            <input type="text" id="shortedurl" size="46" style="text-align:center;" value="https://1ad7ce2c-8fcc-4351-b2d7-e0db6242a905-ide.cs50.xyz:8080/shorted?code={{code}}" readonly>
+        </div>
+        <div id="copybutton" style="text-align:center; margin: auto;">
+            <button onclick="Copy()">Copy link</button>
+        </div>
+        <div id="copybutton" style="text-align:center; margin: auto;">
+            <button onclick="Redirect()">Short another link</button>
+        </div>
+    </body>
+</html>

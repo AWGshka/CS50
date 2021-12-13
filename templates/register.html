@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Link shortener</title>
+        <link rel="icon" type="image/png" href="https://www.pngitem.com/pimgs/m/136-1361476_url-chain-link-png-image-background-twitter-link.png"/>	    <meta name="theme-color" content="#ffffff">
+    </head>
+    <style>
+    </style>
+    <body>
+        <h1 style="text-align:center; margin: auto">Link shortener</h1>
+        <script>
+            document.body.style.zoom = "500%";
+            function Generate() {
+                    let r = Math.random().toString(36).substring(7);
+                    document.getElementById("code").value = r;
+                }
+        </script>
+        <form action="/register" method="post" style="text-align:center; margin: auto">
+            <input type="text" name="code" id="code" placeholder="code" maxlength="6" size="6">
+            <input type="text" name="url" id="url" placeholder="url">
+            <input type="submit" value="Shorten">
+        </form>
+        <br>
+        <form style="text-align:center; margin: auto">
+            <button type="button" onclick="Generate()">Generate code</button>
+        </form>
+        <div id="result" style="text-align:center; margin: auto; font-size: 25px;">
+        </div>
+    </body>
+</html>
