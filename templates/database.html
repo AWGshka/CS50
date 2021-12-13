@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Database</title>
+        <link rel="icon" type="image/png" href="https://www.pngitem.com/pimgs/m/136-1361476_url-chain-link-png-image-background-twitter-link.png"/>	    <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <h1>
+            Database of shorted links:
+        </h1>
+        <ul>
+            {% for row in rows%}
+                <li>CODE: {{ row["code"] }}</li>
+                <li>URL: {{ row["url"] }}</li>
+                <br>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
